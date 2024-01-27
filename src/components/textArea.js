@@ -54,7 +54,7 @@ export default function TextArea(props) {
     function handleChange(events){
         settext(events.target.value);
         setCharacters(events.target.value.length);
-        setWords(events.target.value.split(' ').filter((el)=>{return el.length!==0}).length);
+        setWords(events.target.value.split(/\s+/).filter((el)=>{return el.length!==0}).length);
     }
 
 
